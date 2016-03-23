@@ -24,3 +24,8 @@ services:
 
   redis:
     image: redis
+
+  haproxy:
+    build: ./haproxy
+    ports:
+    - "80:80"
