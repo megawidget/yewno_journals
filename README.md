@@ -28,5 +28,6 @@ This demo is fully functional but there is a couple of potential issues:
   would need not bother with an entirely extraneous `redis` database.
 * There is no way to distinguish journals with identical titles whatsoever as
   that is the only field.  Maybe another field like publication date would help.
+* The `haproxy` configuration has warnings.
 
 In an ideal world I would've had more comments and unit tests!
