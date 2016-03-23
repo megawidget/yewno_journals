@@ -1,0 +1,26 @@
+version: '2'
+services:
+  journals:
+    build: ./journals
+    ports:
+     - "5000:5000"
+    volumes:
+     - ./journals:/code
+    depends_on:
+     - mongo
+
+  autocomplete:
+    build: ./autocomplete
+    ports:
+     - "5001:5001"
+    volumes:
+     - ./autocomplete:/code
+    depends_on:
+     - mongo
+     - redis
+
+  mongo:
+    image: mongo
+
+  redis:
+    image: redis
